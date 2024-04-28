@@ -6,7 +6,7 @@ const wc = require("../circuit/witness_calculator.js");
 
 const mixrAddress = "0xd62d4EA168d7B9713C43159c2BF39459202E7990";
 
-const mixrJSON = require("../json/mixr.json");
+const mixrJSON = require("../json/Mixr.json");
 const mixrABI = mixrJSON.abi;
 const mixrInterface = new ethers.utils.Interface(mixrABI);
 
