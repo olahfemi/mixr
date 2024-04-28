@@ -6,7 +6,7 @@ const wc = require("../circuit/witness_calculator.js");
 
 const mixrAddress = "0xd62d4EA168d7B9713C43159c2BF39459202E7990";
 
-const mixrJSON = require("../json/mixr.json");
+const mixrJSON = require("../json/Mixr.json");
 const mixrABI = mixrJSON.abi;
 const mixrInterface = new ethers.utils.Interface(mixrABI);
 
@@ -182,7 +182,7 @@ const Interface = () => {
     return (
         <div>
 
-            <nav className="navbar navbar-nav fixed-top bg-dark text-light">
+            <nav className="navbar navbar-nav fixed-top  text-light" style={{backgroundColor: "#007bff"}}>
                 {
                     !!account ? (
                         <div className="container">
@@ -202,7 +202,8 @@ const Interface = () => {
                             <div className="navbar-left"><h5>mixr</h5></div>
                             <div className="navbar-right">
                                 <button 
-                                    className="btn btn-primary" 
+                
+                                    className="btn btn-default" 
                                     onClick={connectMetamask}
                                     disabled={metamaskButtonState == ButtonState.Disabled}    
                                 >Connect Metamask</button>
@@ -220,14 +221,14 @@ const Interface = () => {
                 <div className="card mx-auto" style={{ maxWidth: 450 }}>
                     {
                         (section == "Deposit") ? (
-                            <img className="card-img-top" src="/img/deposit.png" />
+                            <img className="card-img-top" src="/img/deposit.png" height={150} width={100} />
                         ) : (
-                            <img className="card-img-top" src="/img/withdraw.png" />
+                            <img className="card-img-top" src="/img/withdraw.png" height={150} width={100} />
                         )
                     }
                     <div className="card-body">
 
-                        <div className="btn-group" style={{ marginBottom: 20 }}>
+                    <div className="btn-group" style={{ marginBottom: 20, display: 'flex', justifyContent: 'center' }}>
                             {
                                 (section == "Deposit") ? (
                                     <button className="btn btn-primary">Deposit</button>
@@ -269,16 +270,17 @@ const Interface = () => {
                                                 
                                             </div>
                                         ) : (
-                                            <div>
-                                                <p className="text-secondary">Note: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
-                                                <button 
-                                                    className="btn btn-success" 
-                                                    onClick={depositEther}
-                                                    disabled={depositButtonState == ButtonState.Disabled}
-                                                ><span className="small">Deposit 0.1 ETH</span></button>
-                                            </div>
+                                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                                            <p className="text-secondary">Note: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
+                                            <button 
+                                                className="btn btn-success" 
+                                                onClick={depositEther}
+                                                disabled={depositButtonState == ButtonState.Disabled}
+                                            ><span className="small">Deposit 0.1 ETH</span></button>
+                                        </div>
+                                        
                                             
-                                        )
+                                        ) 
                                     }
                                 </div>
                             )
@@ -299,7 +301,7 @@ const Interface = () => {
                                                 </div>
                                             </div>
                                         ) : (
-                                            <div>
+                                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                                                 <p className="text-secondary">Note: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
                                                 <div className="form-group">
                                                     <textarea className="form-control" style={{ resize: "none" }} ref={(ta) => { updateTextArea(ta); }}></textarea>
@@ -329,7 +331,7 @@ const Interface = () => {
 
                     <div className="card-footer p-4" style={{ lineHeight: "15px" }}>
                         <span className="small text-secondary" style={{ fontSize: "12px" }}>
-                            <strong>Disclaimer:</strong> Products intended for educational purposes are <i>not</i> to be used with commercial intent.
+                            <strong>Disclaimer:</strong> This product is intended for demonstration purposes and is <i>not</i> to be used with commercial intent.
                         </span>
                     </div>
                 </div>
