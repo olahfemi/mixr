@@ -6,6 +6,8 @@ You'll need Scroll Sepolia ETH. You can get some from a Ethereum Sepolia faucet 
 
 Short video demo: https://youtu.be/PTkma0YXxRg
 
+Ensure you have enough ETH for gas whenever you are interacting with the contracts.
+
 Contracts Deployed on Scroll Sepolia:
 Hasher: 0x69a39B17F0BcDbd2DF985508B001Ee3726d88011
 Verifier: 0x39c8d81Ee6F9A4641dcb24dBb988CBEd8fE3E207
