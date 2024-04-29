@@ -1,4 +1,4 @@
-MIXR is a cryptocurrency mixer. It helps preserve privacy. Users can use this tool to improve their assurance that malicious actors do not know their financial status.
+MIXR is a cryptocurrency mixer, like Tornado cash. It helps preserve privacy. Users can use this tool to improve their assurance that malicious actors do not know their financial status.
 
 Try it out here: https://mixr.vercel.app/
 
